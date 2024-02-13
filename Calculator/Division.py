@@ -1,21 +1,18 @@
-import InterfaceCalculator
+from InterfaceCalculator import InterfaceCalculator
 
 class Division(InterfaceCalculator):
     def __init__(self, values):
-        try:
-            for i in values:
-                self.values = values
-        
-        except ZeroDivisionError:
-            raise("We can't divide to zero")
+        super().__init__(values)
+        self.values = values
     
     def DivisionValues(self):
         try:
-            result = 1
-            for i in self.values:
-                result /= i
+            result = self.values[0]  
+            for i in self.values[1:]:  
+                result /= i  
         except ZeroDivisionError:
-            raise("We can't divide to zero")
+            print("No podemos dividir por cero")
+            return ZeroDivisionError
         
         return result
 
