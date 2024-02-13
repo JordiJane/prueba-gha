@@ -1,11 +1,13 @@
 import InterfaceCalculator
 
-class Sum(InterfaceCalculator):
+class Multiplicate(InterfaceCalculator):
     def __init__(self, values):
         self.values = values
-
-    def SumValues(self):
-        result = 0
+    
+    def MultiplicateValues(self):
+        result = 1
         for i in self.values:
-            result += i
+            result *= i
         return result
+    
+
