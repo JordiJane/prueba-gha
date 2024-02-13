@@ -4,6 +4,7 @@ class InterfaceCalculator:
 
     def SumValues(self):
         pass
+    
     def MinusValues(self):
        pass
     
